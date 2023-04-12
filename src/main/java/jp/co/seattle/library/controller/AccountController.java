@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import jp.co.seattle.library.dto.UserInfo;
-import jp.co.seattle.library.service.UsersService;
+import src.main.java.jp.co.seattle.library.dto.UserInfo;
+import src.main.java.jp.co.seattle.library.service.UsersService;
 
 /**
  * アカウント作成コントローラー
@@ -63,7 +63,7 @@ public class AccountController {
 				return "createAccount";
 			}
 		} else {
-			model.addAttribute("errorMessage", "半角英数字８文字で以上で入力してください。");
+			model.addAttribute("errorMessage", "パスワードは8文字以上かつ半角英数字に設定してください。");
 			return "createAccount";
 		}
 	}
