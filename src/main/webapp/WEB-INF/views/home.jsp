@@ -33,7 +33,7 @@
             </c:if>
             <div>
                 <div class="booklist">
-                    <c:forEach var="bookInfo" items="booklist">
+                    <c:forEach var="bookInfo" items="bookList">
                         <div class="books">
                             <form method="get" class="book_thumnail" action="editBook">
                                 <a href="javascript:void(0)" onclick="this.parentNode.submit();"> <c:if test="${empty bookInfo.thumbnail}">
@@ -45,7 +45,7 @@
                             </form>
                             <ul>
                                 <li class="book_title">${bookinfo.title}</li>
-                                <li class="book_author">$(著){bookinfo.author}</li>
+                                <li class="book_author">${bookinfo.author}(著)</li>
                                 <li class="book_publisher">$出版社{bookinfo.publisher}：</li>
                                 <li class="book_publish_date">$出版日{bookinfo.publish_date}：</li>
                             </ul>
