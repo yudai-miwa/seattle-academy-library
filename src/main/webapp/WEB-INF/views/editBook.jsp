@@ -58,7 +58,7 @@
                     </div>
                     <div>
                         <span>著者名</span><span class="care care2">必須</span>
-                        <input type="text" name="authr" value="${bookInfo.authr}">
+                        <input type="text" name="author" value="${bookInfo.author}">
                     </div>
                     <div>
                         <span>出版社</span><span class="care care2">必須</span>
@@ -66,7 +66,7 @@
                     </div>
                     <div>
                         <span>出版日</span><span class="care care2">必須</span>
-                        <input type="text" name="publish_date" value="${bookInfo.publish_date}">
+                        <input type="text" name="publishDate" value="${bookInfo.publishDate}">
                     </div>
                     <div>
                         <span>ISBN</span><span class="care care1">任意</span>
