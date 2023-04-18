@@ -34,7 +34,7 @@ public class BookUtil {
 			errorList.add(REQUIRED_ERROR);
 		}
 		// ISBNのバリデーションチェック
-		if (isValidIsbn(bookInfo.getIsbn())) {
+		if (!(isValidIsbn(bookInfo.getIsbn()))) {
 			errorList.add(ISBN_ERROR);
 		}
 		// 出版日の形式チェック
@@ -57,9 +57,9 @@ public class BookUtil {
 			//TODO　取得した日付の形式が正しければtrue（タスク４）
 			Date date = formatter.parse(publishDate);
 			String publishdate2 = formatter.format(date);
-			if (publishdate2.equals(publishDate))
+			boolean result = publishdate2.equals(publishDate);
+			return result;
 
-				return true;
 		} catch (Exception p) {
 			p.printStackTrace();
 		}
@@ -74,12 +74,11 @@ public class BookUtil {
 	 */
 	private static boolean isValidIsbn(String isbn) {
 		//TODO　ISBNが半角数字で10文字か13文字であればtrue（タスク４）
-		if (isbn.length() > 0)
-			if (isbn.length() == 10 || isbn.length() == 13 && isbn.matches("^[0-9]+$")) {
-			} else {
-				return true;
-			}
-		return false;
+		if (isbn.isEmpty() || (isbn.length() == 10 || isbn.length() == 13) && isbn.matches("^[0-9]+$")) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	/**
