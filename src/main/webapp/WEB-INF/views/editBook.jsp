@@ -16,7 +16,6 @@
 <script src="resources/js/thumbnail.js"></script>
 </head>
 <body class="wrapper">
- <<<<<<< HEAD
  <header>
   <div class="left">
    <img class="mark" src="resources/img/logo.png" />
