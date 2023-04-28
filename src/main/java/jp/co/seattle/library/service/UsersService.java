@@ -34,6 +34,16 @@ public class UsersService {
 		jdbcTemplate.update(sql);
 	}
 
+	public void resetUser(UserInfo userInfo) {
+
+		// SQL生成
+		String sql = "UPDATE users SET (email, password,reg_date,upd_date) = WHERE ('" + userInfo.getEmail() + "','"
+				+ userInfo.getPassword() + "',now(),now()" + ")";
+
+		jdbcTemplate.update(sql);
+	}
+	
+	
 	/**
 	 * ユーザー情報取得
 	 * 
